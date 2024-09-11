@@ -3,7 +3,6 @@ public class LucasNumber {
     private long value;
 
     public LucasNumber(int number, long value){
-        System.out.println("create constructor");
         this.number = number;
         this.value = value;
     }
@@ -16,5 +15,9 @@ public class LucasNumber {
         long copyValue = this.value;
         int lastNumber = (int)(copyValue % 10);
         return lastNumber;
+    }
+
+    public void print(){
+        System.out.println("Number: " + this.number + ", value: " + this.value);
     }
 }

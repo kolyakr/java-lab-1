@@ -1,27 +1,44 @@
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        generateLucasNumbers(10);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Write number of Lucas numbers row: ");
+        int N = scanner.nextInt();
+
+        generateLucasNumbers(N);
     }
 
     public static void generateLucasNumbers(int N){
-       if(N <= 0){
-           System.out.println("Invalid input. Please write number bigger than 0");
-           return;
-       }
+        if(N <= 0){
+            System.out.println("Invalid input. Please write number bigger than 0");
+            return;
+        }
+        LucasNumber[] array = new LucasNumber[N];
 
-       long firstNum = 2;
-       long secondNum = 1;
-       for(int i = 1; i <= N; i++){
-           if(i == 1 || i == 2){
-               int value = i == 1 ? 2 : 1;
-               System.out.println("Number: " + i + ", value: " + value);
+        long value = 0;
+        long firstNum = 2;
+        long secondNum = 1;
+        for(int i = 0; i < N; i++){
+           if(i == 0 || i == 1){
+               value = i == 0 ? 2 : 1;
            }else{
-               long value = firstNum + secondNum;
+               value = firstNum + secondNum;
                firstNum = secondNum;
                secondNum = value;
-               System.out.println("Number: " + i + ", value: " + value);
            }
+           LucasNumber x = new LucasNumber(i + 1, value);
+           array[i] = x;
        }
+
+        printLucasNumbers(array);
+    }
+
+    public static void printLucasNumbers(LucasNumber[] array){
+        for(int i = 0; i < array.length; i++){
+            if(array[i] != null){
+                array[i].print();
+            }
+        }
     }
 }
