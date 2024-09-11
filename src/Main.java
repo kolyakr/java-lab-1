@@ -19,6 +19,12 @@ public class Main {
         }
     }
 
+    /**
+     * Generate row of Lucas numbers
+     * @param N Number of Lucas numbers in the row
+     * @return Array of LucasNumber objects
+     */
+
     public static LucasNumber[] generateLucasNumbers(int N){
         if(N <= 0){
             System.out.println("Invalid input. Please write number bigger than 0");
@@ -44,6 +50,11 @@ public class Main {
         return array;
     }
 
+    /**
+     * Print Lucas numbers row
+     * @param array Array of LucasNumber objects
+     */
+
     public static void printLucasNumbers(LucasNumber[] array){
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
         System.out.println("Lucas numbers row:");
@@ -54,6 +65,12 @@ public class Main {
         }
         System.out.println("*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*");
     }
+
+    /**
+     * Print all numbers which have the same last digit as in parameter
+     * @param array Array of LucasNumber objects
+     * @param digit Digit which will be compared to the last digit numbers
+     */
 
     public static void printSameLastDigitNums(LucasNumber[] array, int digit){
         int number = 0;
