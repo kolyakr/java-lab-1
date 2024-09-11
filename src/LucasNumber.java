@@ -2,6 +2,11 @@ public class LucasNumber {
     private int number;
     private long value;
 
+    public LucasNumber(){
+        this.number = 0;
+        this.value = 0;
+    }
+
     /**
      * LucasNumber`s constructor
      * @param number number of lucas number in the row
