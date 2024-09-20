@@ -26,14 +26,20 @@ public class LucasNumber {
         this.value = value;
     }
 
-    /**
-     * Prints the Lucas number's position and value.
-     * <p>
-     * This method is used for displaying the details of the Lucas number.
-     * </p>
-     */
-    public void getValue() {
-        System.out.println("Number: " + this.number + "\nValue: " + this.value);
+    public int getNumber() {
+        return number;
+    }
+
+    public void setNumber(int number) {
+        this.number = number;
+    }
+
+    public long getValue() {
+        return value;
+    }
+
+    public void setValue(long value) {
+        this.value = value;
     }
 
     /**
